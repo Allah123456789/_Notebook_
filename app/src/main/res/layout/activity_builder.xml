@@ -7,21 +7,6 @@
     android:background="@drawable/morepngthan"
     tools:context=".Builder">
 
-    <ImageButton
-        android:id="@+id/imageButton7"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:background="#FFFFFF"
-        android:onClick="exit"
-        android:tint="#000000"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.958"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.022"
-        app:srcCompat="@android:drawable/ic_delete" />
-
     <EditText
         android:id="@+id/editTextTextMultiLine"
         android:layout_width="220dp"
@@ -53,17 +38,14 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <ImageView
-        android:visibility="gone"
         android:id="@+id/imageView3"
         android:layout_width="437dp"
         android:layout_height="578dp"
-        android:layout_marginTop="15dp"
         android:layout_marginBottom="93dp"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton7"
-        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/morepngthan" />
 
     <ImageButton

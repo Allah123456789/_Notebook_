@@ -15,9 +15,27 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".Builder" />
-        <activity android:name=".Saved" />
-        <activity android:name=".New" />
+        <activity
+            android:name=".Builder"
+            android:parentActivityName=".New">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".New" />
+            </activity>
+        <activity
+            android:name=".Saved"
+            android:parentActivityName=".New">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".New" />
+        </activity>
+        <activity
+            android:name=".New"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
     </application>
 
 </manifest>
