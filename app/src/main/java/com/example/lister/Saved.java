@@ -30,16 +30,13 @@ public class Saved extends AppCompatActivity {
         ListView listView = findViewById(R.id.memory);
         SimpleCursorAdapter simpleCursorAdapter = new SimpleCursorAdapter(getBaseContext(), android.R.layout.simple_list_item_2, cursor, new String[]{"Name", "Context"}, new int[]{android.R.id.text1, android.R.id.text2}, FLAG_AUTO_REQUERY);
         listView.setAdapter(simpleCursorAdapter);
-        listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
-            @Override
-            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
-                dataBaseHelper.removeNote(id);
-                cursor.requery();
-                Toast.makeText(getApplicationContext(),
-                        "заметка удалена",
-                        Toast.LENGTH_SHORT).show();
-                return true;
-            }
+        listView.setOnItemLongClickListener((parent, view, position, id) -> {
+            dataBaseHelper.removeNote(id);
+            cursor.requery();
+            Toast.makeText(getApplicationContext(),
+                    "заметка удалена",
+                    Toast.LENGTH_SHORT).show();
+            return true;
         });
     }
     public void exit(View view) {
